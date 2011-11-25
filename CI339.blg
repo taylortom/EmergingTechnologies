@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: CI339.aux
+The style file: abbrv.bst
+Database file #1: EmergingTechnologies.bib
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            510 strings with 3960 characters,
+and the built_in function-call counts, 491 in all, are:
+= -- 47
+> -- 25
+< -- 0
++ -- 10
+- -- 8
+* -- 27
+:= -- 101
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 11
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 18
+empty$ -- 33
+format.name$ -- 8
+if$ -- 94
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 1
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 7
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 13
+stack$ -- 0
+substring$ -- 10
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 4
+width$ -- 3
+write$ -- 24
