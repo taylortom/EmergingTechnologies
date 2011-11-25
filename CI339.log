@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  25 NOV 2011 17:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  25 NOV 2011 18:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -261,19 +261,19 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Overfull \hbox (34.9328pt too wide) in paragraph at lines 50--51
+Overfull \hbox (3.7383pt too wide) in paragraph at lines 49--50
 \OT1/cmr/m/n/10 (able to speed up NP-complete prob-lems quadrat-i-cally, but no
-t ex-po-nen-tially?)[Strengths
+t ex-po-nen-tially?)[1].
  []
 
 [1
@@ -281,7 +281,6 @@ t ex-po-nen-tially?)[Strengths
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Missing character: There is no § in font cmr10!
-Missing character: There is no Õ in font cmr10!
 
 [2] [3]
 Missing character: There is no Ò in font cmr10!
@@ -290,10 +289,10 @@ Missing character: There is no Ò in font cmr10!
 Missing character: There is no Ó in font cmr10!
  [4] (./CI339.bbl) [5] (./CI339.aux) ) 
 Here is how much of TeX's memory you used:
- 2225 strings out of 493633
- 29783 string characters out of 3143378
- 90527 words of memory out of 3000000
- 5493 multiletter control sequences out of 15000+200000
+ 2230 strings out of 493633
+ 29851 string characters out of 3143378
+ 90542 words of memory out of 3000000
+ 5498 multiletter control sequences out of 15000+200000
  11125 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  37i,6n,24p,960b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -306,7 +305,7 @@ e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt9.pfb>
-Output written on CI339.pdf (5 pages, 121045 bytes).
+Output written on CI339.pdf (5 pages, 128146 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream

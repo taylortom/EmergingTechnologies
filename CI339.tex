@@ -24,9 +24,8 @@
 \authorrunning{Cryptographic Techniques and Quantum Computing}
 % (feature abused for this document to repeat the title also on left hand pages)
 
-\institute{School of Computing, Engineering and Mathematics,\\
-University of Brighton,\\
-Brighton, United Kingdom\\
+\institute{School of Computing, Engineering and Mathematics, University of Brighton,\\
+Brighton, UK.\\
 \mailsa}
 
 \maketitle
@@ -47,7 +46,7 @@ Research into quantum cryptographic techniques.
 
 \paragraph{} As we're currently moving towards maximum capacity for the old transistor/silicon hardware (predictions of exhausted capacity by 2020)[need citation], there's a call for a higher capacity/smaller form-factor alternative. Quantum computing works at an atomic level, compared with the current transistor technology, allowing for much 'smaller' hardware. Research is already backed by government and military operations.
 
-Although since proven unable to perform NP-complete problems in polynomial time as originally hoped, quantum computers/algorithms have still been proven to perform calculations significantly quicker than classical computers (able to speed up NP-complete problems quadratically, but not exponentially?)[Strengths and Weaknesses of Quantum Computing]. Quantum computers are also able to handle values too large for classical computers.
+Although since proven unable to perform NP-complete problems in polynomial time as originally hoped, quantum computers/algorithms have still been proven to perform calculations significantly quicker than classical computers (able to speed up NP-complete problems quadratically, but not exponentially?)\cite{Bennett:1996fk}. Quantum computers are also able to handle values too large for classical computers.
 
 \paragraph{}Introduce some keywords:
 
@@ -58,20 +57,10 @@ Quantum equivalent of a bit. Quantum bits(qubits) act as a processor as well as 
 
 \begin{quotation}Occurs when qubits interact and become separated. Each resulting member of a pair is properly described by the same quantum mechanical description (state), which is indefinite in terms of important factors such as position, momentum, spin, polarization, etc. According to the Copenhagen interpretation of quantum mechanics, their shared state is indefinite until measured. Quantum entanglement is a form of quantum superposition. When a measurement is made and it causes one member of such a pair to take on a definite value (e.g., clockwise spin), the other member of this entangled pair will at any subsequent time be found to have taken the complementary value (e.g., counterclockwise spin). Thus, there is a correlation between the results of measurements performed on entangled pairs, and this occurs even though the entangled pair may have been separated by arbitrarily large distances.[wiki]\end{quotation}
 
-\subsubsection{Quantum Error Correction}
-
-Used to protect quantum information from errors due to decoherence and other quantum noise. Quantum error correction is essential if one is to achieve fault-tolerant quantum computation that can deal not only with noise on stored quantum information, but also with faulty quantum gates, faulty quantum preparation, and faulty measurements.
-
-The possibility of preserving quantum coherence in the presence of irreversible noise processes.
-
-[Andrew Steane's research]
-
 \subsubsection{Quantum Algorithms}
 
-\paragraph{Simon's Algorithm (1994)}
-Daniel Simon - algorithm capable of solving problems exponentially faster than classical algorithms. Has little practical value.
 \paragraph{Shor's Algorithm (1994)}
-Peter Shor - quantum algorithm for integer factorisation (given 'n', find its prime factors) inß polynomial time. Could be used to break RSA public cryptology scheme - based on the assumption that it's computationally infeasible for classical computers to carry out for large numbers. Demonstrated by IBM (2001) - factored 15 into 3 and 5 using 7 qubits. Doubts have been raised as to whether IBM's experiment was a true demonstration of quantum computation, since no entanglement was observed, but other experiments have since proved this. [Demonstration of Shor’s quantum factoring algorithm using photonic qubits]
+Peter Shor - quantum algorithm for integer factorisation (given 'n', find its prime factors) inß polynomial time. Could be used to break RSA public cryptology scheme - based on the assumption that it's computationally infeasible for classical computers to carry out for large numbers. Demonstrated by IBM (2001) - factored 15 into 3 and 5 using 7 qubits. Doubts have been raised as to whether IBM's experiment was a true demonstration of quantum computation, since no entanglement was observed, but other experiments have since proved this.\cite{Lu:2007uq}
 \paragraph{Grover's Algorithm (1996)}
 Lov Grover - a probabilistic algorithm for searching an unsorted database with 'n' entries (provides quadratic speed-up over classical alternatives)
 
@@ -85,9 +74,22 @@ Brief description of what cryptography is, applications etc.
 
 Classical cryptographic techniques are largely reliant on the current inability to factor very large numbers within a useable timeframe. However, this is likely to change with improvements in computational processing power/introduction of quantum computers (Shor's algorithm).
 
+\subsubsection{Symmetric Key Cryptography}
+
 \subsubsection{Public Key Cryptography}
 
-Underpins such Internet standards as Transport Layer Security (TLS) (successor to SSL), PGP, and GPG.
+1976 paper, Whitfield Diffie and Martin Hellman proposed the notion of public-key (also, more generally, called asymmetric key) cryptography in which two different but mathematically related keys are used.
+
+Underpins such Internet standards as Transport Layer Security (TLS), Pretty Good Privacy (PGP) and GNU Privacy Guard (GPG).
+
+\paragraph{Algorithms: }
+\begin{itemize}
+\item Diffie-Hellman 
+\item RSA
+\item Cramer-Shoup 
+\item ElGamal 
+\item Elliptic Curve
+\end{itemize}
 
 Requires two keys (one for encryption, one for decryption), one of which is made public, participants must create a public/private key pair.
 
@@ -113,9 +115,9 @@ A commitment scheme allows a party Alice to fix a certain value (to "commit") in
 
 The idea that a person can 'commit' a value and transmit this to another party without said party being able to discover the value of the data until the sender decides to reveal it. Based upon the idea that in quantum mechanics, merely listening in on a quantum message alters the nature of the quantum system, thus is easily detected by the parties sending/receiving the message. This has an obvious application in election scenarios. In fact, a computer developed by Id Quantique was used during the Swiss canton of Geneva parliamentary elections (2007)[citation needed].
 
-However, this has been proven to be impossible[The Trouble with Bit Commitment - Mayers] [Unconditionally secure commitment is impossible - Mayers, 1997] - a computationally unlimited attacker can break any quantum commitment method. (also, [Is Quantum Bit Commitment Really Possible? - Lo and Chau, 1997])
+However, this has been proven to be impossible - a computationally unlimited attacker can break any quantum commitment method\cite{Lo:1997ys}\cite{Mayers:1997vn}\cite{Mayers:1999kx}.
 
-\begin{quotation}However, the bit commitment idea, long thought to be secure through quantum methods, was recently proved to be insecure (Mayers 1997, Lo and Chau 1997)\cite{Steine:1997fk}\end{quotation}
+\begin{quotation}However, the bit commitment idea, long thought to be secure through quantum methods, was recently proved to be insecure (Mayers 1997, Lo and Chau 1997)\cite{Steane:1997zr}\end{quotation}
 
 Discuss what's still possible. Whether it's still viable.
 

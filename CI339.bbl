@@ -1,12 +1,38 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bennett:1996fk}
+C.~H. Bennett, G.~Brassard, E.~Bernstein, and U.~Vazirani.
+\newblock Strengths and weaknesses of quantum computing.
+\newblock {\em SIAM Journal on Computing}, December 1996.
+
 \bibitem{Hughes:2000uq}
 R.~Hughes, C.~Williams, and R.~Doyle.
 \newblock Quantum computing: The final frontier?
 \newblock {\em IEEE Intelligent Systems}, September/October, 2000.
 
-\bibitem{Steine:1997fk}
-R.~Steine.
+\bibitem{Lo:1997ys}
+H.-K. Lo and H.~F. Chau.
+\newblock Is quantum bit commitment really possible?
+\newblock {\em Phys. Rev. Lett.}, 78(17), 1997.
+
+\bibitem{Lu:2007uq}
+C.-Y. Lu, D.~E. Browne, T.~Yang, and J.-W. Pan.
+\newblock Demonstration of a compiled version of shor's quantum factoring
+  algorithm using photonic qubits.
+\newblock {\em Phys. Rev. Lett.}, 99(25), December 2007.
+
+\bibitem{Mayers:1997vn}
+D.~Mayers.
+\newblock Unconditionally secure quantum bit commitment is impossible.
+\newblock {\em Phys. Rev. Lett.}, 78(17), 1997.
+
+\bibitem{Mayers:1999kx}
+D.~Mayers.
+\newblock The trouble with quantum bit commitment.
+\newblock Technical report, Computing Research Repository (CoRR), 1999.
+
+\bibitem{Steane:1997zr}
+A.~Steane.
 \newblock Quantum computing.
 \newblock Technical report, University of Oxford, 1997.
 
