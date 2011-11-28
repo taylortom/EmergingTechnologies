@@ -1,0 +1,151 @@
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{url}
+\urldef{\mailsa}\path|tt36@uni.brighton.ac.uk|
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Cryptographic Techniques and Quantum Computing}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Quantum Cryptography}
+
+% the name(s) of the author(s) follow(s) next
+\author{Thomas Taylor}%
+
+\authorrunning{Cryptographic Techniques and Quantum Computing}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+\institute{School of Computing, Engineering and Mathematics, University of Brighton,\\
+Brighton, UK.\\
+\mailsa}
+
+\maketitle
+
+
+\begin{abstract}
+Research into quantum cryptographic techniques.
+%\keywords{Quantum Computing, Cryptography}
+\end{abstract}
+
+\section{Introduction}
+
+\begin{quotation}If you think you understand quantum theory, you don't understand quantum theory.\end{quotation}
+\begin {quotation}You don't understand quantum theory, you just get used to it.\end{quotation}
+\textbf{Richard Feynman[uncited]}
+
+\subsection{Brief Introduction to Quantum Computing}
+
+\paragraph{} As we're currently moving towards maximum capacity for the old transistor/silicon hardware (predictions of exhausted capacity by 2020)[need citation], there's a call for a higher capacity/smaller form-factor alternative. Quantum computing works at an atomic level, compared with the current transistor technology, allowing for much 'smaller' hardware. Research is already backed by government and military operations.
+
+Although since proven unable to perform NP-complete problems in polynomial time as originally hoped, quantum computers/algorithms have still been proven to perform calculations significantly quicker than classical computers (able to speed up NP-complete problems quadratically, but not exponentially?)\cite{Bennett:1996fk}. Quantum computers are also able to handle values too large for classical computers.
+
+\paragraph{}Introduce some keywords:
+
+\subsubsection{Quantum bits and Quantum States}
+Quantum equivalent of a bit. Quantum bits(qubits) act as a processor as well as memory.  An atom's electron cloud has a spin (the angular momentum of its magnetic field) called spin up/spin down - similar to the 0/1 of bit/transistor technology. Whereas a classical bit can only be one of two states: 0 or 1, a qubit can also be up and down, as well as every value in between.
+
+\subsubsection{Quantum entanglement}
+
+\begin{quotation}Occurs when qubits interact and become separated. Each resulting member of a pair is properly described by the same quantum mechanical description (state), which is indefinite in terms of important factors such as position, momentum, spin, polarization, etc. According to the Copenhagen interpretation of quantum mechanics, their shared state is indefinite until measured. Quantum entanglement is a form of quantum superposition. When a measurement is made and it causes one member of such a pair to take on a definite value (e.g., clockwise spin), the other member of this entangled pair will at any subsequent time be found to have taken the complementary value (e.g., counterclockwise spin). Thus, there is a correlation between the results of measurements performed on entangled pairs, and this occurs even though the entangled pair may have been separated by arbitrarily large distances.[wiki]\end{quotation}
+
+\subsubsection{Quantum Algorithms}
+
+\paragraph{Shor's Algorithm (1994)}
+Peter Shor - quantum algorithm for integer factorisation (given 'n', find its prime factors) inß polynomial time. Could be used to break RSA public cryptology scheme - based on the assumption that it's computationally infeasible for classical computers to carry out for large numbers. Demonstrated by IBM (2001) - factored 15 into 3 and 5 using 7 qubits. Doubts have been raised as to whether IBM's experiment was a true demonstration of quantum computation, since no entanglement was observed, but other experiments have since proved this.\cite{Lu:2007uq}
+\paragraph{Grover's Algorithm (1996)}
+Lov Grover - a probabilistic algorithm for searching an unsorted database with 'n' entries (provides quadratic speed-up over classical alternatives)
+
+\subsection{Brief Introduction to Cryptography}
+
+Brief description of what cryptography is, applications etc.
+
+\section{Cryptographic Techniques}
+
+\subsection{Classical cryptography}
+
+Classical cryptographic techniques are largely reliant on the current inability to factor very large numbers within a useable timeframe. However, this is likely to change with improvements in computational processing power/introduction of quantum computers (Shor's algorithm).
+
+\subsubsection{Symmetric Key Cryptography}
+
+\subsubsection{Public Key Cryptography}
+
+1976 paper, Whitfield Diffie and Martin Hellman proposed the notion of public-key (also, more generally, called asymmetric key) cryptography in which two different but mathematically related keys are used.
+
+Underpins such Internet standards as Transport Layer Security (TLS), Pretty Good Privacy (PGP) and GNU Privacy Guard (GPG).
+
+\paragraph{Algorithms: }
+\begin{itemize}
+\item Diffie-Hellman 
+\item RSA
+\item Cramer-Shoup 
+\item ElGamal 
+\item Elliptic Curve
+\end{itemize}
+
+Requires two keys (one for encryption, one for decryption), one of which is made public, participants must create a public/private key pair.
+
+The sender encrypts the message using the recipient's public key. To decrypt the message, the recipient uses the private key which no-one else (including the sender) has.
+
+While It is easy for the sender/recipient to generate the public/private keys and encrypt/decrypt the message, it is extremely difficult for anyone to calculate out the private key based on knowledge of the public key, based on the fact that the factorisation of very large numbers has no efficient solution.
+
+A public key algorithm does not require a secure initial exchange of secret keys between the sender and receiver. It also allows authenticity of a message to be checked by creating a digital signature of a message using the private key, which can be verified using the public key.
+
+\subsection{Quantum cryptography}
+
+As quantum computers are developed, exiting classical cryptographic techniques will no longer provide secure communication. Quantum cryptography however, aims to guarantee 100\% security. It is able to do this due to the fact that unlike classical cryptographic methods, it relies on laws of quantum physics to provide security, rather than mathematical functions.
+
+\begin{quotation}Touted by scientists as the ultimate unbreakable code[IEEE Quantum cryptography cracked]\end{quotation}
+
+Discuss the use of quantum entanglement.
+
+Current 150km limitation - limitation of optical fibre length and the loss of photons.
+
+\subsubsection{Quantum bit commitment}
+
+A commitment scheme allows a party Alice to fix a certain value (to "commit") in such a way that Alice cannot change that value any more while still ensuring that the recipient Bob cannot learn anything about that value until Alice decides to reveal it.
+
+The idea that a person can 'commit' a value and transmit this to another party without said party being able to discover the value of the data until the sender decides to reveal it. Based upon the idea that in quantum mechanics, merely listening in on a quantum message alters the nature of the quantum system, thus is easily detected by the parties sending/receiving the message. This has an obvious application in election scenarios. In fact, a computer developed by Id Quantique was used during the Swiss canton of Geneva parliamentary elections (2007)[citation needed].
+
+However, this has been proven to be impossible - a computationally unlimited attacker can break any quantum commitment method\cite{Lo:1997ys}\cite{Mayers:1997vn}\cite{Mayers:1999kx}.
+
+\begin{quotation}However, the bit commitment idea, long thought to be secure through quantum methods, was recently proved to be insecure (Mayers 1997, Lo and Chau 1997)\cite{Steane:1997zr}\end{quotation}
+
+Discuss what's still possible. Whether it's still viable.
+
+\subsubsection{Quantum key distribution}
+
+Look at different techniques/algorithms, research. Whether it's viable. Discuss current commercial solutions.
+
+\paragraph{1} We can encrypt message (“plaintext”) (P) according to some algorithm (E) before transmission to produce a “ciphertext,” C = EK(P), where K is a secret parameter known as a cryptographic key (a random binary number sequence, typically a few hundred bits in length) 
+\paragraph{2} On receiving the ciphertext, the intended recipient can invert the encryption process using the decryption algorithm (D) to recover the original message P = DK(C), provided the secret key K is known. 
+\paragraph{3} Although the encryption and decryption algorithms E and D might be publicly known, an eavesdropper passively monitoring the transmission C could not discern the underlying message P because of the randomization the encryption process introduced, provided the key K remains secret.\cite{Hughes:2000uq}
+
+Mathematical proofs have been established which confirm the security of quantum bit commitment[citation needed].
+
+\section{Conclusion\\
+Future Technology/Application of Quantum Cryptography}
+
+\begin{itemize}
+
+\item{Secure voting (bit commitment)}
+\item{NASA Earth to space/satellite communication}\cite{Hughes:2000uq}:
+
+\begin{quotation} There will often be the need for onboard capability to process information, make decisions, and sometimes, replan elements of the mission in real time. Unfortunately, planning is an NP-Hard problem, so fine-grained replanning quickly consumes available computational resources.
+
+Currently, no known algorithm (classical or quantum) can solve NP-Hard problems in better than exponential time in the worst case. But it appears that quantum algorithms can be faster than classical ones by a significant factor.\end{quotation}
+
+\end{itemize}
+
+\bibliographystyle{abbrv}
+\bibliography{EmergingTechnologies}
+
+\end{document}

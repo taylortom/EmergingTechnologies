@@ -1,88 +1,78 @@
 \documentclass[runningheads,a4paper]{llncs}
 
 \usepackage{amssymb}
-\usepackage{graphicx}
 
 \usepackage{url}
-\urldef{\mailsa}\path|tt36@uni.brighton.ac.uk|
+\urldef{\mail}\path|tt36@uni.brighton.ac.uk|
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
 \begin{document}
 
-\mainmatter  % start of an individual contribution
+\mainmatter  
 
-% first the title is needed
-\title{Cryptographic Techniques and Quantum Computing}
-
-% a short form should be given in case it is too long for the running head
-\titlerunning{Quantum Cryptography}
-
-% the name(s) of the author(s) follow(s) next
-\author{Thomas Taylor}%
-
-\authorrunning{Cryptographic Techniques and Quantum Computing}
-% (feature abused for this document to repeat the title also on left hand pages)
-
+\title{The Use of Quantum Mechanical Effects in Cryptographic Techniques}
+\titlerunning{Running title \#1}
+\author{Thomas Taylor}
+\authorrunning{Running title \#2} % (feature abused to repeat the title on left hand pages)
 \institute{School of Computing, Engineering and Mathematics, University of Brighton,\\
-Brighton, UK.\\
-\mailsa}
+Brighton, UK. \mail}
 
 \maketitle
 
-
 \begin{abstract}
-Research into quantum cryptographic techniques.
-%\keywords{Quantum Computing, Cryptography}
+With the recent advances in making physical quantum computers a reality, 
+It's becoming more likely that we will soon have hardware capable of applying quantum mechanical algorithms to break classical cryptographic techniques. In this paper, I discuss some of the classical techniques used today, and their quantum equivalents.
 \end{abstract}
+
+\textbf{Questions}
+\begin{itemize}
+\item{Fair to assume knowledge of NP-completeness, polynomial/quadratic time?}
+\item{Have split paper into: intro, classical techniques, quantum concepts, quantum techniques, conclusion}
+\end{itemize}
 
 \section{Introduction}
 
-\begin{quotation}If you think you understand quantum theory, you don't understand quantum theory.\end{quotation}
-\begin {quotation}You don't understand quantum theory, you just get used to it.\end{quotation}
-\textbf{Richard Feynman[uncited]}
+- What is cryptography?\\
+- What is it used for?\\
+- Why is it important?\\
+- Discuss the how security may (will) be compromised given the introduction of quantum computational hardware (with relation to the factoring of large numbers - specifically Shor's algorithm)
 
-\subsection{Brief Introduction to Quantum Computing}
-
-\paragraph{} As we're currently moving towards maximum capacity for the old transistor/silicon hardware (predictions of exhausted capacity by 2020)[need citation], there's a call for a higher capacity/smaller form-factor alternative. Quantum computing works at an atomic level, compared with the current transistor technology, allowing for much 'smaller' hardware. Research is already backed by government and military operations.
-
-Although since proven unable to perform NP-complete problems in polynomial time as originally hoped, quantum computers/algorithms have still been proven to perform calculations significantly quicker than classical computers (able to speed up NP-complete problems quadratically, but not exponentially?)\cite{Bennett:1996fk}. Quantum computers are also able to handle values too large for classical computers.
-
-\paragraph{}Introduce some keywords:
-
-\subsubsection{Quantum bits and Quantum States}
-Quantum equivalent of a bit. Quantum bits(qubits) act as a processor as well as memory.  An atom's electron cloud has a spin (the angular momentum of its magnetic field) called spin up/spin down - similar to the 0/1 of bit/transistor technology. Whereas a classical bit can only be one of two states: 0 or 1, a qubit can also be up and down, as well as every value in between.
-
-\subsubsection{Quantum entanglement}
-
-\begin{quotation}Occurs when qubits interact and become separated. Each resulting member of a pair is properly described by the same quantum mechanical description (state), which is indefinite in terms of important factors such as position, momentum, spin, polarization, etc. According to the Copenhagen interpretation of quantum mechanics, their shared state is indefinite until measured. Quantum entanglement is a form of quantum superposition. When a measurement is made and it causes one member of such a pair to take on a definite value (e.g., clockwise spin), the other member of this entangled pair will at any subsequent time be found to have taken the complementary value (e.g., counterclockwise spin). Thus, there is a correlation between the results of measurements performed on entangled pairs, and this occurs even though the entangled pair may have been separated by arbitrarily large distances.[wiki]\end{quotation}
-
-\subsubsection{Quantum Algorithms}
-
-\paragraph{Shor's Algorithm (1994)}
-Peter Shor - quantum algorithm for integer factorisation (given 'n', find its prime factors) inß polynomial time. Could be used to break RSA public cryptology scheme - based on the assumption that it's computationally infeasible for classical computers to carry out for large numbers. Demonstrated by IBM (2001) - factored 15 into 3 and 5 using 7 qubits. Doubts have been raised as to whether IBM's experiment was a true demonstration of quantum computation, since no entanglement was observed, but other experiments have since proved this.\cite{Lu:2007uq}
-\paragraph{Grover's Algorithm (1996)}
-Lov Grover - a probabilistic algorithm for searching an unsorted database with 'n' entries (provides quadratic speed-up over classical alternatives)
-
-\subsection{Brief Introduction to Cryptography}
-
-Brief description of what cryptography is, applications etc.
-
-\section{Cryptographic Techniques}
-
-\subsection{Classical cryptography}
+\section{Classical Cryptography}
 
 Classical cryptographic techniques are largely reliant on the current inability to factor very large numbers within a useable timeframe. However, this is likely to change with improvements in computational processing power/introduction of quantum computers (Shor's algorithm).
 
-\subsubsection{Symmetric Key Cryptography}
+\subsection{Symmetric Key Cryptography}
 
-\subsubsection{Public Key Cryptography}
+- Who developed it?\\
+- What is it used for/where is it used?\\
+- Why is it used?\\
+- (How is it used?)\\
 
-1976 paper, Whitfield Diffie and Martin Hellman proposed the notion of public-key (also, more generally, called asymmetric key) cryptography in which two different but mathematically related keys are used.
+\begin{quotation} Symmetric-key cryptography refers to encryption methods in which both the sender and receiver share the same key (or, less commonly, in which their keys are different, but related in an easily computable way). This was the only kind of encryption publicly known until June 1976.[18]
+
+One round (out of 8.5) of the patented IDEA cipher, used in some versions of PGP for high-speed encryption of, for instance, e-mail Symmetric key ciphers are implemented as either block ciphers or stream ciphers. A block cipher enciphers input in blocks of plaintext as opposed to individual characters, the input form used by a stream cipher.
+
+The Data Encryption Standard (DES) and the Advanced Encryption Standard (AES) are block cipher designs which have been designated cryptography standards by the US government (though DES's designation was finally withdrawn after the AES was adopted).[20] Despite its deprecation as an official standard, DES (especially its still-approved and much more secure triple-DES variant) remains quite popular; it is used across a wide range of applications, from ATM encryption to e-mail privacy and secure remote access. Many other block ciphers have been designed and released, with considerable variation in quality. Many have been thoroughly broken, such as FEAL.
+
+Stream ciphers, in contrast to the 'block' type, create an arbitrarily long stream of key material, which is combined with the plaintext bit-by-bit or character-by-character, somewhat like the one-time pad. In a stream cipher, the output stream is created based on a hidden internal state which changes as the cipher operates. That internal state is initially set up using the secret key material. RC4 is a widely used stream cipher; see Category:Stream ciphers. Block ciphers can be used as stream ciphers; see Block cipher modes of operation.
+
+Cryptographic hash functions are a third type of cryptographic algorithm. They take a message of any length as input, and output a short, fixed length hash which can be used in (for example) a digital signature. For good hash functions, an attacker cannot find two messages that produce the same hash. MD4 is a long-used hash function which is now broken; MD5, a strengthened variant of MD4, is also widely used but broken in practice. The U.S. National Security Agency developed the Secure Hash Algorithm series of MD5-like hash functions: SHA-0 was a flawed algorithm that the agency withdrew; SHA-1 is widely deployed and more secure than MD5, but cryptanalysts have identified attacks against it; the SHA-2 family improves on SHA-1, but it isn't yet widely deployed, and the U.S. standards authority thought it "prudent" from a security perspective to develop a new standard to "significantly improve the robustness of NIST's overall hash algorithm toolkit." Thus, a hash function design competition is underway and meant to select a new U.S. national standard, to be called SHA-3, by 2012.
+
+Message authentication codes (MACs) are much like cryptographic hash functions, except that a secret key can be used to authenticate the hash value upon receipt.\end{quotation}
+
+\subsection{Assymmetric Key Cryptography (Public Key)}
+
+- Who developed it?\\
+- What is it used for/where is it used?\\
+- Why is it used?\\
+- (How is it used?)\\
+
+1976 paper, Whitfield Diffie and Martin Hellman proposed the notion of public-key (also, more generally, called asymmetric key) cryptography in which two different but mathematically related keys are used.\cite{Diffie:1976fk}
 
 Underpins such Internet standards as Transport Layer Security (TLS), Pretty Good Privacy (PGP) and GNU Privacy Guard (GPG).
 
-\paragraph{Algorithms: }
+\paragraph{Public Key Algorithms: }
 \begin{itemize}
 \item Diffie-Hellman 
 \item RSA
@@ -99,17 +89,40 @@ While It is easy for the sender/recipient to generate the public/private keys an
 
 A public key algorithm does not require a secure initial exchange of secret keys between the sender and receiver. It also allows authenticity of a message to be checked by creating a digital signature of a message using the private key, which can be verified using the public key.
 
-\subsection{Quantum cryptography}
+\section{Quantum Mechanical Concepts}
+
+\subsection{Quantum bits and Quantum States}
+Quantum equivalent of a bit. Quantum bits(qubits) act as a processor as well as memory.  An atom's electron cloud has a spin (the angular momentum of its magnetic field) called spin up/spin down - similar to the 0/1 of bit/transistor technology. Whereas a classical bit can only be one of two states: 0 or 1, a qubit can also be up and down, as well as every value in between.
+
+\subsection{Quantum entanglement}
+
+\begin{quotation}Occurs when qubits interact and become separated. Each resulting member of a pair is properly described by the same quantum mechanical description (state), which is indefinite in terms of important factors such as position, momentum, spin, polarization, etc. According to the Copenhagen interpretation of quantum mechanics, their shared state is indefinite until measured. Quantum entanglement is a form of quantum superposition. When a measurement is made and it causes one member of such a pair to take on a definite value (e.g., clockwise spin), the other member of this entangled pair will at any subsequent time be found to have taken the complementary value (e.g., counterclockwise spin). Thus, there is a correlation between the results of measurements performed on entangled pairs, and this occurs even though the entangled pair may have been separated by arbitrarily large distances.[wiki]\end{quotation}
+
+\subsection{Quantum Algorithms}
+
+\paragraph{Shor's Algorithm (1994)}
+Peter Shor - quantum algorithm for integer factorisation (given 'n', find its prime factors) in polynomial time.\cite{Shor:1994fk} Could be used to break RSA public key cryptography scheme - based on the assumption that it's computationally infeasible for classical computers to carry out for large numbers. Demonstrated by IBM (2001) - factored 15 into 3 and 5 using 7 qubits. Doubts have been raised as to whether IBM's experiment was a true demonstration of quantum computation, since no entanglement was observed, but other experiments have since proved this.\cite{Lu:2007uq}
+
+\paragraph{Grover's Algorithm (1996)}
+Lov Grover - a probabilistic algorithm for searching an unsorted database with 'n' entries (provides quadratic speed-up over classical alternatives)
+
+\section{Quantum Cryptography}
 
 As quantum computers are developed, exiting classical cryptographic techniques will no longer provide secure communication. Quantum cryptography however, aims to guarantee 100\% security. It is able to do this due to the fact that unlike classical cryptographic methods, it relies on laws of quantum physics to provide security, rather than mathematical functions.
 
-\begin{quotation}Touted by scientists as the ultimate unbreakable code[IEEE Quantum cryptography cracked]\end{quotation}
+\begin{quotation}Touted by scientists as the ultimate unbreakable code[IEEE Quantum cryptography cracked online article]\end{quotation}
 
 Discuss the use of quantum entanglement.
 
 Current 150km limitation - limitation of optical fibre length and the loss of photons.
 
-\subsubsection{Quantum bit commitment}
+\subsection{Quantum bit commitment}
+
+- Who developed it?\\
+- What is it used for/where is it used?\\
+- Why is it used?\\
+- (How is it used?)\\
+- Discuss what's still possible. Whether it's still viable\\
 
 A commitment scheme allows a party Alice to fix a certain value (to "commit") in such a way that Alice cannot change that value any more while still ensuring that the recipient Bob cannot learn anything about that value until Alice decides to reveal it.
 
@@ -119,20 +132,32 @@ However, this has been proven to be impossible - a computationally unlimited att
 
 \begin{quotation}However, the bit commitment idea, long thought to be secure through quantum methods, was recently proved to be insecure (Mayers 1997, Lo and Chau 1997)\cite{Steane:1997zr}\end{quotation}
 
-Discuss what's still possible. Whether it's still viable.
+\subsection{Quantum key distribution}
 
-\subsubsection{Quantum key distribution}
+- Who developed it?\\
+- What is it used for/where is it used?\\
+- Why is it used?\\
+- (How is it used?)\\
 
 Look at different techniques/algorithms, research. Whether it's viable. Discuss current commercial solutions.
 
 \paragraph{1} We can encrypt message (“plaintext”) (P) according to some algorithm (E) before transmission to produce a “ciphertext,” C = EK(P), where K is a secret parameter known as a cryptographic key (a random binary number sequence, typically a few hundred bits in length) 
+
 \paragraph{2} On receiving the ciphertext, the intended recipient can invert the encryption process using the decryption algorithm (D) to recover the original message P = DK(C), provided the secret key K is known. 
+
 \paragraph{3} Although the encryption and decryption algorithms E and D might be publicly known, an eavesdropper passively monitoring the transmission C could not discern the underlying message P because of the randomization the encryption process introduced, provided the key K remains secret.\cite{Hughes:2000uq}
 
 Mathematical proofs have been established which confirm the security of quantum bit commitment[citation needed].
 
-\section{Conclusion\\
-Future Technology/Application of Quantum Cryptography}
+Researchers have recently shown that it is not only possible, but technologically feasible to mount an undetected attack (known as the time-shift) against a commercial quantum key distribution system.\cite{Zhao:2008fk}
+
+Similarly, fjdskfljdsfkldsjfsdkl\cite{Wiechers:2011fk} and fdjsfjdsklfkjldsfjdslk\cite{Lydersen:2010qy}
+
+\section{Conclusion}
+
+- Summarise the paper\\
+- Discuss Future Technology/Application of Quantum Cryptography\\
+- Discuss that although methods have been proven insecure, new methods will no doubt be developed
 
 \begin{itemize}
 
