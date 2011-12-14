@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Deutsch:1996fk}
+D.~Deutsch, A.~Ekert, R.~Jozsa, C.~Macchiavello, S.~Popescu, and A.~Sanperra.
+\newblock Quantum privacy amplification and the security of quantum
+  cryptography over noisy channels.
+\newblock {\em Phys. Rev. Lett.}, 77:2818, 1996.
+
 \bibitem{Diffie:1976fk}
 W.~Diffie and M.~E. Hellman.
 \newblock Multi-user cryptographic techniques.
@@ -38,10 +44,21 @@ D.~Mayers.
 \newblock The trouble with quantum bit commitment.
 \newblock Technical report, Computing Research Repository (CoRR), 1999.
 
+\bibitem{Rivest:1990fk}
+R.~L. Rivest.
+\newblock {\em Handbook of Theoretical Computer Science}, chapter~13.
+\newblock The MIT Press, 1990.
+
 \bibitem{Shor:1994fk}
 P.~W. Shor.
 \newblock Algorithms for quantum computation: Discrete logarithms and
   factoring, 1994.
+
+\bibitem{Shor:2000uq}
+P.~W. Shor and J.~Preskill.
+\newblock Simple proof of security of the bb84 quantum key distribution
+  protocol.
+\newblock {\em Phys. Rev. Lett.}, 85(2):441--444, July 2000.
 
 \bibitem{Steane:1997zr}
 A.~Steane.
