@@ -46,89 +46,47 @@ The public key technique proved so effective, that it now underpins many integra
 \item Elliptic Curve
 \end{itemize}
 
-\section{Computational Complexity}
-
-'The computational complexity of the problem is determined by the number of steps a Turing machine must make in order to complete any algorithmic method to solve the problem.'
-
-Number of steps 's'
-If an algorithm exists with 's' given by any polynomial function of L (eg s ? L3 + L) then the problem is deemed tractable and is placed in the complexity class “p”. 
-If 's' rises exponentially with l (eg s ? 2L = x) then the problem is hard and is in another complexity class. 
-The class “np” is the set of problems for which solutions can be verified in poly- nomial time. Obviously p ? np, and one would guess that there are problems in np which are not in p, (i.e. np =? p) though surprisingly the latter has never been proved, since it is very hard to rule out the possible existence of as yet undiscovered algorithms. 
-An important example of an intractable problem is that of factorisation: given a composite (i.e. non- prime) number x, the task is to find one of its fac- tors. If x is even, or a multiple of any small number, then it is easy to find a factor. The interesting case is when the prime factors of x are all themselves large. In this case there is no known simple method. The best known method, the number field sieve (Menezes et. al. 1997) requires a number of computational steps of order s ? exp(2L1/3(log L)2/3) where L = ln x. By devoting a substantial machine network to this task, one can today factor a number of 130 decimal digits (Crandall 1997), i.e. L ? 300, giving s ? 1018. This is time-consuming but possible (for example 42 days at1012 operations per second). However, if we double L, s increases to ? 1025, so now the problem is intractable: it would take a million years with current technology, or would require computers running a million times faster than current ones. The lesson is an important one: a computationally ‘hard’ problem is one which in practice is not merely difficult but impossible to solve.
-The factorisation problem has acquired great practical importance because it is at the heart of widely used cyptographic systems such as that of Rivest, Shamir and Adleman (1979) (see Hellman 1979). For, given a message M (in the form of a long binary number), it is easy to calculate an encrypted version E = Ms mod c where s and c are well-chosen large integers which can be made public. To decrypt the message, the receiver calculates Et mod c which is equal to M for a value of t which can be quickly deduced from s and the factors of c (Schroeder 1984). In practice c = pq is chosen to be the product of two large primes p, q known only to the user who published c, so only that user can read the messages—unless someone manages to factorise c. It is a very useful feature that no secret keys need be distributed in such a system: the ‘key’ c, s allowing encryption is public knowledge.
-
 \section{Integer Factorisation}
 
-In classical computing, the factoring of large numbers is very computationally expensive; the most efficient algorithm currently available for factoring numbers with more than 100 digits is the General Number Field Sieve whose running time, while sub-exponential, is also super-polynomial in the size of the input.
+In classical computing, the factoring of large numbers is very computationally expensive; the most efficient algorithm currently available for factoring numbers with more than 100 digits is the General Number Field Sieve whose running time, while sub-exponential, is still super-polynomial in the size of the input. In December 2009, researchers concluded an experiment into the breaking of an RSA-768 number of 232 digits, using the number field sieve algorithm. It took the team a total of 2 years to factor the number, with their estimation being that breaking an RSA-1024 number would be a thousand times harder\cite{Kleinjung:2010:FRM:1881412.1881436}. Although this method has proven secure, simple using bigger numbers to increase security is not a preferable solution.
 
-When Peter Shor discovered a quantum algorithm in 1994 which was capable of factoring integers in polynomial time\cite{Shor:1994fk}, suddenly the public-key cryptographic techniques which had become such a standard looked vulnerable to attack.
+When Peter Shor discovered a quantum algorithm in 1994 which was capable of factoring integers in polynomial time\cite{Shor:1994fk}, suddenly the public-key cryptographic techniques which had become a standard looked vulnerable to attack.
 
-Then in 2001, IBM demonstrated the algorithm on a quantum computer by factoring 15 using 7 qubits. Although this demonstration was disregarded by some as no quantum entanglement had been observed, subsequent experiments have been carried out which support IBM's findings\cite{Lu:2007uq}.
+Then in 2001, IBM demonstrated the algorithm on a practical quantum computer by factoring 15 using 7 qubits[Citation?]. Although this demonstration was disregarded by some as no quantum entanglement had been observed, subsequent experiments have been since carried out which support IBM's findings\cite{Lu:2007uq}.
 
 \paragraph{Shor's Algorithm} 
 
 Explanation????
 
-
 \section{Quantum Mechanical Concepts}
 
 \subsection{Quantum bits and Quantum States}
 
-In classical computing, binary digits (or bits) form the basic building block of data. The quantum bit (or qubit) is the quantum computing equivalent. While in classical computing, a bit is capable of existing in one of two states (0 and 1), in quantum computing, the qubit is capable of existing in 
-
-
-
-
-Quantum Computing - Steane:The fundamental resources required for computing are a means to store and to manipulate symbols. 
-The general insight is that computation is deemed hard or inefficient if the amount of resources required rises exponentially with a measure of the size of the problem to be addressed. 
-we find that a computer must be able to manipulate bi- nary symbols, not just unary symbols, otherwise the number of memory locations needed would grow exponentially with the amount of information to be manipulated. 
-To manipulate n binary symbols, it is not necessary to manipulate them all at once, since it can be shown that any transformation can be brought about by manipulating the binary symbols one at a time or in pairs. 
-A binary ‘logic gate’ takes two bits x, y as inputs, and calculates a function f(x,y). Since f can be 0 or 1, and there are four possible inputs, there are 16 possible functions f. This set of 16 different logic gates is called a ‘universal set’, since by combining such gates in series, any transformation of n bits can be carried out. Futhermore, the action of some of the 16 gates can be reproduced by combining others, so we do not need all 16, and in fact only one, the nand gate, is necessary (nand is not and, for which the output is 0 if and only if both inputs are 1).
-
-In classical information theory...
-
-'The elementary unit of quantum information is the qubit (Schumacher 1995). A single qubit can be envisaged as a two-state system such as a spin-half or a two- level atom (see fig. 12), but when we measure quan- tum information in qubits we are really doing something more abstract: a quantum system is said to have n qubits if it has a Hilbert space of 2n dimensions, and so has available 2n mutually orthogonal quantum states (recall that n classical bits can represent up to 2n different things). This definition of the qubit will be elaborated in section 5.6.'
-
-Quantum equivalent of a bit. Quantum bits(qubits) act as a processor as well as memory.  An atom's electron cloud has a spin (the angular momentum of its magnetic field) called spin up/spin down - similar to the 0/1 of bit/transistor technology. Whereas a classical bit can only be one of two states: 0 or 1, a qubit can also be up and down, as well as every value in between.
+In classical computing, binary digits (or bits) form the basic building block of data. The quantum bit (or qubit) is the quantum computing equivalent, acting both as a processor as well as memory. While in classical computing, a bit is capable of existing in one of only two states (0 and 1), in quantum computing, the qubit can exist in a 0 or 1 state, or as a superposition of both these two states. 
 
 \subsection{Quantum entanglement}
 
-\begin{quotation}Occurs when qubits interact and become separated. Each resulting member of a pair is properly described by the same quantum mechanical description (state), which is indefinite in terms of important factors such as position, momentum, spin, polarization, etc. According to the Copenhagen interpretation of quantum mechanics, their shared state is indefinite until measured. Quantum entanglement is a form of quantum superposition. When a measurement is made and it causes one member of such a pair to take on a definite value (e.g., clockwise spin), the other member of this entangled pair will at any subsequent time be found to have taken the complementary value (e.g., counterclockwise spin). Thus, there is a correlation between the results of measurements performed on entangled pairs, and this occurs even though the entangled pair may have been separated by arbitrarily large distances.[wiki]\end{quotation}
+When two qubits come into contact with each other and interact, the pair of qubits are said to have become 'entangled'. Just as individual qubits have a 'superposition' state, which is essentially a superposition of the superposition state of the two qubits.
+
+This interaction causes the qubits to become related in such a way that if a measurement of either of the pair is made, its state is changed. This measurement also causes the other qubit of the pair to change to the complementary state of its partner, irrespective of distance.
+
+It is this behaviour which underpins the concept of quantum bit commitment, which is discussed later.
 
 \section{Quantum Cryptography}
 
-As quantum computers are developed, exiting classical cryptographic techniques will no longer provide secure communication. Quantum cryptography however, aims to guarantee 100\% security. It is able to do this due to the fact that unlike classical cryptographic methods, it relies on laws of quantum physics to provide security, rather than mathematical functions.
+As practical quantum computers are developed, existing classical cryptographic techniques will no longer provide secure communication. Quantum cryptography however, aims to guarantee 100\% security. It is able to do this due to the fact that unlike classical cryptographic methods, it relies on the laws of quantum physics to provide secure transmissions, rather than mathematical functions and computation complexity.
 
-\begin{quotation}Touted by scientists as the ultimate unbreakable code[IEEE Quantum cryptography cracked online article]\end{quotation}
-
-Discuss the use of quantum entanglement.
-
-Current 150km limitation - limitation of optical fibre length and the loss of photons.
+Quantum cryptography is usually divided into two sub-areas: quantum bit commitment, and quantum key distribution.  
 
 \subsection{Quantum bit commitment}
 
-- Who developed it?\\
-- What is it used for/where is it used?\\
-- Why is it used?\\
-- (How is it used?)\\
-- Discuss what's still possible. Whether it's still viable\\
+The concept of quantum bit commitment refers to the ability for a person Alice to 'commit' a value and transmit this to another party Bob, without Bob being able to discover the value of the data until Alice decides to reveal it. 
 
-A commitment scheme allows a party Alice to fix a certain value (to "commit") in such a way that Alice cannot change that value any more while still ensuring that the recipient Bob cannot learn anything about that value until Alice decides to reveal it.
+This technique relies on quantum entanglement to function; the fact that merely listening in on a quantum message alters the nature of the quantum system, thus is easily detected by the parties sending and receiving the message. The most obvious application for this method of cryptography is in election scenarios, where voters can place their vote in such a way that no-one is able to discover the contents of the vote until the voter specifies, while still providing proof that that voter has indeed place their vote in a specific timeframe.
 
-The idea that a person can 'commit' a value and transmit this to another party without said party being able to discover the value of the data until the sender decides to reveal it. Based upon the idea that in quantum mechanics, merely listening in on a quantum message alters the nature of the quantum system, thus is easily detected by the parties sending/receiving the message. This has an obvious application in election scenarios. In fact, a computer developed by Id Quantique was used during the Swiss canton of Geneva parliamentary elections (2007)[citation needed].
-
-However, this has been proven to be impossible - a computationally unlimited attacker can break any quantum commitment method\cite{Lo:1997ys}\cite{Mayers:1997vn}\cite{Mayers:1999kx}. 'Participants can cheat and make use of quantum entanglement' steane
-
-'Bit commit- ment refers to the scenario in which Alice must make some decision, such as a vote, in such a way that Bob can be sure that Alice fixed her vote before a given time, but where Bob can only learn Alice’s vote at some later time which she chooses.' Steane
-
-\begin{quotation}However, the bit commitment idea, long thought to be secure through quantum methods, was recently proved to be insecure (Mayers 1997, Lo and Chau 1997)\cite{Steane:1997zr}\end{quotation}
+However, this technique, though long thought to be secure, has since been proven to be insecure\cite{Lo:1997ys}\cite{Mayers:1997vn}\cite{Mayers:1999kx}.
 
 \subsection{Quantum key distribution}
-
-- Who developed it?\\
-- What is it used for/where is it used?\\
-- Why is it used?\\
-- (How is it used?)\\
 
 Look at different techniques/algorithms, research. Whether it's viable. Discuss current commercial solutions.
 
@@ -146,6 +104,8 @@ The concept of the time-shift attack: \quotation{Eve can shift the arrival time 
 Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the security proofs; the attacker in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'.
 
 Similarly, fjdskfljdsfkldsjfsdkl\cite{Wiechers:2011fk} and fdjsfjdsklfkjldsfjdslk\cite{Lydersen:2010qy}
+
+This method was successfully trialled using a computer system developed by Id Quantique during the Swiss canton of Geneva parliamentary elections in 2007[citation].
 
 \section{Conclusion}
 

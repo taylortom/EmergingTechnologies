@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CI339.aux
 The style file: abbrv.bst
 Database file #1: EmergingTechnologies.bib
-You've used 14 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            588 strings with 5928 characters,
-and the built_in function-call counts, 4079 in all, are:
-= -- 374
-> -- 252
-< -- 1
-+ -- 101
-- -- 86
-* -- 290
-:= -- 754
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 86
+            597 strings with 6421 characters,
+and the built_in function-call counts, 4888 in all, are:
+= -- 450
+> -- 320
+< -- 2
++ -- 128
+- -- 112
+* -- 362
+:= -- 886
+add.period$ -- 46
+call.type$ -- 15
+change.case$ -- 102
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 143
-empty$ -- 280
-format.name$ -- 86
-if$ -- 807
+cite$ -- 15
+duplicate$ -- 166
+empty$ -- 319
+format.name$ -- 112
+if$ -- 973
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 12
-newline$ -- 72
-num.names$ -- 28
-pop$ -- 76
+int.to.str$ -- 15
+missing$ -- 13
+newline$ -- 77
+num.names$ -- 30
+pop$ -- 92
 preamble$ -- 1
-purify$ -- 71
+purify$ -- 86
 quote$ -- 0
-skip$ -- 102
+skip$ -- 121
 stack$ -- 0
-substring$ -- 104
-swap$ -- 13
-text.length$ -- 1
+substring$ -- 141
+swap$ -- 23
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
+type$ -- 58
 warning$ -- 0
-while$ -- 30
-width$ -- 16
-write$ -- 155
+while$ -- 35
+width$ -- 17
+write$ -- 169

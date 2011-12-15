@@ -17,6 +17,15 @@ R.~Hughes, C.~Williams, and R.~Doyle.
 \newblock Quantum computing: The final frontier?
 \newblock {\em IEEE Intelligent Systems}, September/October, 2000.
 
+\bibitem{Kleinjung:2010:FRM:1881412.1881436}
+T.~Kleinjung, K.~Aoki, J.~Franke, A.~K. Lenstra, E.~Thom\'{e}, J.~W. Bos,
+  P.~Gaudry, A.~Kruppa, P.~L. Montgomery, D.~A. Osvik, H.~Te~Riele,
+  A.~Timofeev, and P.~Zimmermann.
+\newblock Factorization of a 768-bit rsa modulus.
+\newblock In {\em Proceedings of the 30th annual conference on Advances in
+  cryptology}, CRYPTO'10, pages 333--350, Berlin, Heidelberg, 2010.
+  Springer-Verlag.
+
 \bibitem{Lo:1997ys}
 H.-K. Lo and H.~F. Chau.
 \newblock Is quantum bit commitment really possible?

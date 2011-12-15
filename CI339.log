@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 DEC 2011 15:36
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 DEC 2011 23:59
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -180,33 +180,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Missing character: There is no Ò in font cmr10!
-Missing character: There is no Ó in font cmr10!
-Missing character: There is no Ò in font cmr10!
-Missing character: There is no Ó in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ñ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
- [2]
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
- [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 114--119
-
- []
-
-Missing character: There is no Õ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
-
- []
-
-[5]
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 Missing character: There is no Ò in font cmr10!
 Missing character: There is no Ó in font cmr10!
 Missing character: There is no Ò in font cmr10!
@@ -223,34 +197,35 @@ Missing character: There is no Ò in font cmr10!
 Missing character: There is no Ó in font cmr10!
 Missing character: There is no Ò in font cmr10!
 Missing character: There is no Ó in font cmr10!
- [6] (./CI339.bbl
-Underfull \hbox (badness 1314) in paragraph at lines 32--36
+ [4]
+(./CI339.bbl
+Underfull \hbox (badness 1314) in paragraph at lines 41--45
 []\OT1/cmr/m/n/9 L. Ly-der-sen, C. Wiech-ers, C. Wittmann, D. Elser, J. Skaar, 
 and
  []
 
-) [7] (./CI339.aux) ) 
+[5]) [6] (./CI339.aux) ) 
 Here is how much of TeX's memory you used:
- 1004 strings out of 493633
- 11481 string characters out of 3143378
+ 1006 strings out of 493633
+ 11525 string characters out of 3143378
  67501 words of memory out of 3000000
- 4340 multiletter control sequences out of 15000+200000
+ 4342 multiletter control sequences out of 15000+200000
  8323 words of font info for 32 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 29i,6n,24p,955b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-t10.pfb>
-Output written on CI339.pdf (7 pages, 145592 bytes).
+ 29i,5n,24p,825b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb>
+Output written on CI339.pdf (6 pages, 140763 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
