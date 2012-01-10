@@ -6,12 +6,6 @@ D.~Deutsch, A.~Ekert, R.~Jozsa, C.~Macchiavello, S.~Popescu, and A.~Sanperra.
   cryptography over noisy channels.
 \newblock {\em Phys. Rev. Lett.}, 77:2818, 1996.
 
-\bibitem{Diffie:1976fk}
-W.~Diffie and M.~E. Hellman.
-\newblock Multi-user cryptographic techniques.
-\newblock In {\em Proceedings of the June 7-10, 1976, national computer
-  conference and exposition}, AFIPS '76, New York, New York, 1976. ACM.
-
 \bibitem{Hughes:2000uq}
 R.~Hughes, C.~Williams, and R.~Doyle.
 \newblock Quantum computing: The final frontier?
@@ -26,11 +20,6 @@ T.~Kleinjung, K.~Aoki, J.~Franke, A.~K. Lenstra, E.~Thom\'{e}, J.~W. Bos,
   cryptology}, CRYPTO'10, pages 333--350, Berlin, Heidelberg, 2010.
   Springer-Verlag.
 
-\bibitem{Lo:1997ys}
-H.-K. Lo and H.~F. Chau.
-\newblock Is quantum bit commitment really possible?
-\newblock {\em Phys. Rev. Lett.}, 78(17), 1997.
-
 \bibitem{Lu:2007uq}
 C.-Y. Lu, D.~E. Browne, T.~Yang, and J.-W. Pan.
 \newblock Demonstration of a compiled version of shor's quantum factoring
@@ -42,16 +31,6 @@ L.~Lydersen, C.~Wiechers, C.~Wittmann, D.~Elser, J.~Skaar, and V.~Makarov.
 \newblock Hacking commercial quantum cryptography systems by tailored bright
   illumination.
 \newblock {\em Nature Photonics}, 4(10), 2010.
-
-\bibitem{Mayers:1997vn}
-D.~Mayers.
-\newblock Unconditionally secure quantum bit commitment is impossible.
-\newblock {\em Phys. Rev. Lett.}, 78(17), 1997.
-
-\bibitem{Mayers:1999kx}
-D.~Mayers.
-\newblock The trouble with quantum bit commitment.
-\newblock Technical report, Computing Research Repository (CoRR), 1999.
 
 \bibitem{Rivest:1990fk}
 R.~L. Rivest.
@@ -68,11 +47,6 @@ P.~W. Shor and J.~Preskill.
 \newblock Simple proof of security of the bb84 quantum key distribution
   protocol.
 \newblock {\em Phys. Rev. Lett.}, 85(2):441--444, July 2000.
-
-\bibitem{Steane:1997zr}
-A.~Steane.
-\newblock Quantum computing.
-\newblock Technical report, University of Oxford, 1997.
 
 \bibitem{Wiechers:2011fk}
 C.~Wiechers, L.~Lydersen, C.~Wittmann, D.~Elser, J.~Skaar, C.~Marquardt,

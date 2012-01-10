@@ -20,102 +20,87 @@
 \maketitle
 
 \begin{abstract}
-%With the recent advances in making physical quantum computers a reality, it's becoming more likely that we will soon have hardware capable of applying quantum mechanical algorithms to break classical cryptographic techniques. In this paper, I discuss some of the current (classical?!) techniques used today, and their quantum equivalents.
+The biggest weakness of current cryptographic techniques is that they rely upon the inability for current generation hardware to factor large numbers in a useable time-frame. With recent advances in making physical quantum computers a reality, it's becoming increasingly likely that we will soon have hardware capable of applying quantum mechanical algorithms to break classical cryptographic techniques.
 \end{abstract}
 
 \section{Introduction}
 
-The primary concern when it comes to accessing sensitive data is \emph{privacy}; how to enable secure, private communication between two parties such that any adversaries that may be listening know nothing about what has been  communicated\cite{Rivest:1990fk}. Given the increasing amount of sensitive data accessible over the internet such as medical records, personal banking and payrolls, not to mention the number of social networks and other online services which store individuals' personal data, cryptography and data security has never been more important.
+The primary concern when it comes to accessing sensitive data is \emph{privacy}. More specifically, how to enable secure, private communication between two parties such that any adversaries that may be listening know nothing about what has been communicated\cite{Rivest:1990fk}. Given the increasing amount of sensitive data accessible over the internet such as medical records, personal banking and employee payrolls, not to mention the number of social networks and other online services which store individuals' personal data, cryptography and data security has never been more important.
 
-Given the importance of ensuring data security over the internet, it is somewhat surprising that the modern (classical) cryptographic techniques that we use today are still largely reliant on the current inability to factor very large numbers within a usable time-frame; such techniques can be easily broken given enough computing power. While this does not prove problematic with current generation hardware, with the recent developments in computer systems capable of quantum computation[citation needed], and the existence of quantum algorithms capable of providing polynomial speed up of integer factorisation\cite{Shor:1994fk}, modern cryptographic techniques are looking ever more vulnerable to attack, and the need for more secure forms of cryptography are becoming increasingly apparent.
-
-\subsection{Asymmetric Key Cryptography (Public Key)}
-
-One of the most widely used methods of cryptology is asymmetric, or public key cryptography. First proposed by Whitfield Diffie and Martin Hellman in their now seminal 1976 paper \textit{Multi-user cryptographic techniques}\cite{Diffie:1976fk}, public key cryptography introduced the notion of using two different (but mathematically related) keys to secure data communication. One of these keys is used in the encryption process, and the other for decryption. One of the keys is made public, and is used to generate a public-private key pair by the participants. First, the sender encrypts the message using the public key of the recipient. The recipient then uses their own private key to decrypt the message.
-
-One of the main benefits to using this system is that the generation of the keys and the encryption/decryption processes are trivial for the sender/reciever, whereas it is incredibly expensive computationally for an attacker to decypher the message. The use of public keys also removes the need for a secure exchange of keys between participants, as with some other cryptographic methods.
-
-The public key technique proved so effective, that it now underpins many integral internet standards such as Transport Layer Security (TLS), GNU Privacy Guard (GPG), and Pretty Good Privacy (PGP).
-
-\paragraph{Public Key Algorithms: ??????}
-\begin{itemize}
-\item Diffie-Hellman 
-\item RSA
-\item Cramer-Shoup 
-\item ElGamal 
-\item Elliptic Curve
-\end{itemize}
-
-\section{Integer Factorisation}
-
-In classical computing, the factoring of large numbers is very computationally expensive; the most efficient algorithm currently available for factoring numbers with more than 100 digits is the General Number Field Sieve whose running time, while sub-exponential, is still super-polynomial in the size of the input. In December 2009, researchers concluded an experiment into the breaking of an RSA-768 number of 232 digits, using the number field sieve algorithm. It took the team a total of 2 years to factor the number, with their estimation being that breaking an RSA-1024 number would be a thousand times harder\cite{Kleinjung:2010:FRM:1881412.1881436}. Although this method has proven secure, simple using bigger numbers to increase security is not a preferable solution.
-
-When Peter Shor discovered a quantum algorithm in 1994 which was capable of factoring integers in polynomial time\cite{Shor:1994fk}, suddenly the public-key cryptographic techniques which had become a standard looked vulnerable to attack.
-
-Then in 2001, IBM demonstrated the algorithm on a practical quantum computer by factoring 15 using 7 qubits[Citation?]. Although this demonstration was disregarded by some as no quantum entanglement had been observed, subsequent experiments have been since carried out which support IBM's findings\cite{Lu:2007uq}.
-
-\paragraph{Shor's Algorithm} 
-
-Explanation????
+It is somewhat surprising then that the classical cryptographic techniques that we use today are still largely reliant on the performance limitations of current generation hardware; such techniques can be easily broken given enough time and computing power. Whilst this does not prove problematic with current hardware, the recent developments in computer systems capable of quantum computation, and the existence of quantum algorithms capable of providing polynomial speed up of integer factorisation\cite{Shor:1994fk}, modern cryptographic techniques are looking ever more vulnerable to attack, and the need for more secure forms of cryptography are becoming increasingly apparent.
 
 \section{Quantum Mechanical Concepts}
 
 \subsection{Quantum bits and Quantum States}
 
-In classical computing, binary digits (or bits) form the basic building block of data. The quantum bit (or qubit) is the quantum computing equivalent, acting both as a processor as well as memory. While in classical computing, a bit is capable of existing in one of only two states (0 and 1), in quantum computing, the qubit can exist in a 0 or 1 state, or as a superposition of both these two states. 
+In classical computing, binary digits (or bits) form the basic building block of data. The quantum bit (or qubit) is the quantum computing equivalent, acting both as a processor as well as memory. While in classical computing, a bit is capable of existing in one of only two states (0 and 1), in quantum computing, the qubit can exist in a 0 or 1 state, or as a superposition of both these two states (essentially an infinite number of in-between states). 
 
 \subsection{Quantum entanglement}
 
-When two qubits come into contact with each other and interact, the pair of qubits are said to have become 'entangled'. Just as individual qubits have a 'superposition' state, which is essentially a superposition of the superposition state of the two qubits.
+Quantum entanglement is a unique behaviour observed when two qubits come into contact. When coming into contact, the pair of qubits are said to have become 'entangled'. Just as individual qubits have a 'superposition' state so too do entangled qubits, which is essentially a superposition of the superposition state of the two qubits.
 
-This interaction causes the qubits to become related in such a way that if a measurement of either of the pair is made, its state is changed. This measurement also causes the other qubit of the pair to change to the complementary state of its partner, irrespective of distance.
+\paragraph{}[MORE INFORMATION NEEDED]\paragraph{}
 
-It is this behaviour which underpins the concept of quantum bit commitment, which is discussed later.
+This interaction causes the qubits to become associated to each other in such a way that if a measurement of either of the pair is made, which its state being changed as a result, the state of the other qubit changes to the complementary state of its partner. This behaviour occurs irrespective of the distance between the qubits.
 
-\section{Quantum Cryptography}
+\section{Integer Factorisation}
 
-As practical quantum computers are developed, existing classical cryptographic techniques will no longer provide secure communication. Quantum cryptography however, aims to guarantee 100\% security. It is able to do this due to the fact that unlike classical cryptographic methods, it relies on the laws of quantum physics to provide secure transmissions, rather than mathematical functions and computation complexity.
+In classical computing, the most efficient algorithm currently available for factoring numbers with more than 100 digits is the General Number Field Sieve whose running time, while sub-exponential, is still super-polynomial in the size of the input. In December 2009, researchers concluded an experiment into the breaking of an RSA-768 number of 232 digits, using the number field sieve algorithm. It took the team a total of 2 years to factor the number, with their estimation being that breaking an RSA-1024 number would be a thousand times harder\cite{Kleinjung:2010:FRM:1881412.1881436}. Although this method has so far proven secure for obvious reasons and using larger numbers would provide greater security, this is not a preferable solution. 
 
-Quantum cryptography is usually divided into two sub-areas: quantum bit commitment, and quantum key distribution.  
+When Peter Shor discovered a quantum algorithm in 1994 which was capable of factoring integers in polynomial time\cite{Shor:1994fk}, suddenly the public-key cryptographic techniques which had become a standard looked vulnerable to attack. Theoretically, the discovery of Shor's algorithm meant that 
 
-\subsection{Quantum bit commitment}
+This was further proven in 2001 when IBM demonstrated the algorithm on a practical quantum computer by factoring 15 using 7 qubits[Citation?]. Although this demonstration was disregarded by some as no quantum entanglement had been observed, subsequent experiments have since been carried out which support IBM's findings\cite{Lu:2007uq}.
 
-The concept of quantum bit commitment refers to the ability for a person Alice to 'commit' a value and transmit this to another party Bob, without Bob being able to discover the value of the data until Alice decides to reveal it. 
+\section{Asymmetric Key Cryptography (Public Key)} 
 
-This technique relies on quantum entanglement to function; the fact that merely listening in on a quantum message alters the nature of the quantum system, thus is easily detected by the parties sending and receiving the message. The most obvious application for this method of cryptography is in election scenarios, where voters can place their vote in such a way that no-one is able to discover the contents of the vote until the voter specifies, while still providing proof that that voter has indeed place their vote in a specific timeframe.
+The asymmetric (or public key) method is the most popular cryptographic technique used today, and underpins many integral internet standards such as Transport Layer Security (TLS), GNU Privacy Guard (GPG), and Pretty Good Privacy (PGP).
 
-However, this technique, though long thought to be secure, has since been proven to be insecure\cite{Lo:1997ys}\cite{Mayers:1997vn}\cite{Mayers:1999kx}.
+One of the main benefits to using the public key system is that the generation of the keys and the encryption/decryption processes are trivial for the sender and receiver, whereas it is incredibly expensive computationally for an attacker to decypher the message. Public keys also remove the need for a secure exchange of keys between participants, as with some other cryptographic methods.
 
-\subsection{Quantum key distribution}
+The security of public key cryptography lies in the fact that it is currently incredibly computationally expensive (and therefore infeasible) to factor very large numbers, or at least to do so in a useable timeframe. However, this is also the biggest drawback of using public key, as any public key algorithm can be broken fairly trivially given enough computing power and time.
 
-Look at different techniques/algorithms, research. Whether it's viable. Discuss current commercial solutions.
+\section{Quantum key distribution}
 
-\paragraph{1} We can encrypt message (“plaintext”) (P) according to some algorithm (E) before transmission to produce a “ciphertext,” C = EK(P), where K is a secret parameter known as a cryptographic key (a random binary number sequence, typically a few hundred bits in length) 
+With the discovery of Shor's algorithm suddenly rendering the public key method insecure (at least in theory), there was a need to develop new cryptographic techniques which could utilise the same quantum mechanical concepts to provide more secure data transmission. Quantum key distribution (QKD) provides a possible solution to this problem.
 
-\paragraph{2} On receiving the ciphertext, the intended recipient can invert the encryption process using the decryption algorithm (D) to recover the original message P = DK(C), provided the secret key K is known. 
+\paragraph{How it works}
 
-\paragraph{3} Although the encryption and decryption algorithms E and D might be publicly known, an eavesdropper passively monitoring the transmission C could not discern the underlying message P because of the randomization the encryption process introduced, provided the key K remains secret.\cite{Hughes:2000uq}
+Encrypt the message using some algorithm using a key
+On receiving the encrypted message, the recipient can decrypt the message (provided the key is known)
+An eavesdropper is unable to decipher the message due to the randomisation introduced in the encryption process (provided the key remains secret).\cite{Hughes:2000uq}
 
-\paragraph{}
-Although rigorous mathematical proofs have been established which confirm the security of quantum bit commitment\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack (known as the time-shift) against a \emph{commercial} quantum key distribution system.\cite{Zhao:2008fk}. 
+\paragraph{How it's different to public key}
+The technique is very similar to the public key method, but differs in...
+the data transmission is protected by the laws of physics rather than computational complexity as with existing classical techniques.
 
-The concept of the time-shift attack: \quotation{Eve can shift the arrival time of each signal to either A or B randomly with probabilities pA and pB = 1 ? pA respectively. Eve can carefully choose pA to keep the number of Bob’s detection events of “0”s and “1”s equal. Since Bob’s measurement result will be biased towards “0” or “1” depending on the time shift (A or B), Eve can “steal” information without alerting Alice or Bob.} 
+\paragraph{Initial problems}
 
-Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the security proofs; the attacker in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'.
+Distance
 
-Similarly, fjdskfljdsfkldsjfsdkl\cite{Wiechers:2011fk} and fdjsfjdsklfkjldsfjdslk\cite{Lydersen:2010qy}
+The field of QKD has evolved rapidly in the last decades. Today QKD implementations in laboratories can generate key over fibre channels with lengths up to 250 km6 and a few QKD systems are even commercially available promising enhanced security for data communication.
 
-This method was successfully trialled using a computer system developed by Id Quantique during the Swiss canton of Geneva parliamentary elections in 2007[citation].
+\paragraph{Commercial solutions}
+
+Although QKD is a relatively new field, there are already a number of commercially available QKD systems, supposedly offering greater security than classical methods (though not quite guaranteeing 100\% security).
+
+\paragraph{Latest research}
+
+Although rigorous mathematical proofs have been established which confirm the security of QKD\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack (known as the time-shift attack) against a \emph{commercial} QKD system.\cite{Zhao:2008fk}. 
+
+\begin{quotation}Eve can shift the arrival time of each signal to either A or B randomly with probabilities pA and pB = 1 ? pA respectively. Eve can carefully choose pA to keep the number of Bob’s detection events of “0”s and “1”s equal. Since Bob’s measurement result will be biased towards “0” or “1” depending on the time shift (A or B), Eve can “steal” information without alerting Alice or Bob.\end{quotation}
+
+Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the original security proofs; the attacker proposed in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'. 
+
+Similarly, fdjsfjdsklfkjldsfjdslk\cite{Lydersen:2010qy} and fjdskfljdsfkldsjfsdkl\cite{Wiechers:2011fk}
 
 \section{Conclusion}
 
 - Summarise the paper\\
 - Discuss Future Technology/Application of Quantum Cryptography\\
-- Discuss that although methods have been proven insecure, new methods will no doubt be developed
+- Discuss that although methods have been proven insecure, new methods will no doubt be developed (also note that only current commercial techniques have been broken, doesn't change the validity of the theoretical concept)
 
 \begin{itemize}
 
-\item{Secure voting (bit commitment)}
 \item{NASA Earth to space/satellite communication}\cite{Hughes:2000uq}:
 
 \begin{quotation} There will often be the need for onboard capability to process information, make decisions, and sometimes, replan elements of the mission in real time. Unfortunately, planning is an NP-Hard problem, so fine-grained replanning quickly consumes available computational resources.
