@@ -11,7 +11,7 @@
 
 \mainmatter  
 
-\title{The Use of Quantum Mechanical Effects in Cryptographic Techniques}
+\title{The Use of Quantum Mechanical Effects to Provide Secure Data Communication}
 \titlerunning{The Use of Quantum Mechanical Effects in Cryptographic Techniques}
 \author{Thomas Taylor\\ \mail}
 \authorrunning{The Use of Quantum Mechanical Effects in Cryptographic Techniques} % (feature abused to repeat the title on left hand pages)
@@ -39,8 +39,6 @@ In classical computing, binary digits (or bits) form the basic building block of
 
 Quantum entanglement is a unique behaviour observed when two qubits come into contact. When coming into contact, the pair of qubits are said to have become 'entangled'. Just as individual qubits have a 'superposition' state so too do entangled qubits, which is essentially a superposition of the superposition state of the two qubits.
 
-\paragraph{}[MORE INFORMATION NEEDED]\paragraph{}
-
 This interaction causes the qubits to become associated to each other in such a way that if a measurement of either of the pair is made, which its state being changed as a result, the state of the other qubit changes to the complementary state of its partner. This behaviour occurs irrespective of the distance between the qubits.
 
 \section{Integer Factorisation}
@@ -67,17 +65,18 @@ The sender 'Alice' first encrypts each bit of the message using a key generated 
 
 The biggest advantage to using QKD over existing public key systems is the fact that the data transmission is protected by the laws of physics, rather than computational complexity, and the performance of current systems.
 
-Although rigorous mathematical proofs have been established which seemingly confirm the security of QKD\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack against a \emph{commercial} QKD system. Known as a time-shift attack, an eavesdropper 'Eve' can exploit the efficiency of detectors used to receive the transmission to break the security of the system\cite{Zhao:2008fk}. Although these commercial solutions have been proven insecure, it is important to note that the commercial QKD systems 'deviate from the models in the security proofs'\cite{Lydersen:2010qy}.
-
-Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the original security proofs; the attacker proposed in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'. 
-
-The real point of weakness in a QKD system is the public communications that are required for Bob and Alice to tell each other how they made their measurements. In principle, you can learn nothing beyond the number of bits sent, and which bit positions can be used to generate a secret key unless, two conditions are met: Eve must control the arrival time of the bits at Bob's detectors, and Bob's detectors must not be identical. The first condition is easily met if you insert switches and rolls of fiber optic cable and a few other optic devices to keep the optical pulse length right—actually, making it shorter is even better, and this is possible also. The second condition is always met. No two detectors are ever exactly identical. From Bob and Alice's communication, Eve might get the whole key, or at least enough of it so that a brute force attack can succeed.
+Although rigorous mathematical proofs have been established which seemingly confirm the security of QKD\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack against a \emph{commercial} QKD system. Known as a time-shift attack, an eavesdropper 'Eve' can exploit the efficiency of detectors used to receive the transmission to break the security of the system\cite{Zhao:2008fk}. Although these commercial solutions have been proven insecure, it is important to note that the commercial QKD systems 'deviate from the models in the security proofs'\cite{Lydersen:2010qy}. Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the original security proofs; the attacker proposed in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'. Using this method, Eve might be able to ascertain the whole key, or at least enough of the key for a brute force attack to succeed.
 
 \section{Conclusion}
 
-- Summarise the paper\\
-- Discuss Future Technology/Application of Quantum Cryptography\\
-- Discuss that although methods have been proven insecure, new methods will no doubt be developed (also note that only current commercial techniques have been broken, doesn't change the validity of the theoretical concept)
+- Problem with existing\\
+- What quantum techniques can offer\\
+- Where we currently are with quantum key distribution\\
+  Discuss that although methods have been proven insecure, new methods will no doubt be developed (also note that only current commercial techniques have been broken, doesn't change the validity of the theoretical concept)\\
+
+Quantum key distribution 
+
+- Space communication
 
 \begin{itemize}
 
