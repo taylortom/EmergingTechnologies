@@ -63,35 +63,15 @@ The security of public key cryptography lies in the fact that it is currently in
 
 With the discovery of Shor's algorithm suddenly rendering the public key method insecure (at least in theory), there was a need to develop new cryptographic techniques which could utilise the same quantum mechanical concepts to provide more secure data transmission. Quantum key distribution (QKD) provides a possible solution to this problem.
 
-\paragraph{How it works}
+The sender 'Alice' first encrypts each bit of the message using a key generated from a random quantum state (as chosen by Alice), and sends the message. When the second party 'Bob' receives the transmission, he measures the data using a similarly random key. The two parties then publicly state the method chosen to prepare or measure the message. From this, they can ascertain which bits were prepared in the same way, and collate these bits into a new string. Provided there was no interference, these two strings should be identical to one another, although in practise, a transmission is considered secure if it has an error rate of considerably less than 25\%\cite{Steane:1997zr}. Any eavesdroppers of the message would cause qubits to become corrupted, as their mere measurement causes them to change state as mentioned earlier. Therefore, Alice and Bob can discover if the data has been compromised.
 
-Encrypt the message using some algorithm using a key
-On receiving the encrypted message, the recipient can decrypt the message (provided the key is known)
-An eavesdropper is unable to decipher the message due to the randomisation introduced in the encryption process (provided the key remains secret).\cite{Hughes:2000uq}
+The biggest advantage to using QKD over existing public key systems is the fact that the data transmission is protected by the laws of physics, rather than computational complexity, and the performance of current systems.
 
-\paragraph{How it's different to public key}
-The technique is very similar to the public key method, but differs in...
-the data transmission is protected by the laws of physics rather than computational complexity as with existing classical techniques.
-
-\paragraph{Initial problems}
-
-Distance
-
-The field of QKD has evolved rapidly in the last decades. Today QKD implementations in laboratories can generate key over fibre channels with lengths up to 250 km6 and a few QKD systems are even commercially available promising enhanced security for data communication.
-
-\paragraph{Commercial solutions}
-
-Although QKD is a relatively new field, there are already a number of commercially available QKD systems, supposedly offering greater security than classical methods (though not quite guaranteeing 100\% security).
-
-\paragraph{Latest research}
-
-Although rigorous mathematical proofs have been established which confirm the security of QKD\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack (known as the time-shift attack) against a \emph{commercial} QKD system.\cite{Zhao:2008fk}. 
-
-\begin{quotation}Eve can shift the arrival time of each signal to either A or B randomly with probabilities pA and pB = 1 ? pA respectively. Eve can carefully choose pA to keep the number of Bob’s detection events of “0”s and “1”s equal. Since Bob’s measurement result will be biased towards “0” or “1” depending on the time shift (A or B), Eve can “steal” information without alerting Alice or Bob.\end{quotation}
+Although rigorous mathematical proofs have been established which seemingly confirm the security of QKD\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack against a \emph{commercial} QKD system. Known as a time-shift attack, an eavesdropper 'Eve' can exploit the efficiency of detectors used to receive the transmission to break the security of the system\cite{Zhao:2008fk}. Although these commercial solutions have been proven insecure, it is important to note that the commercial QKD systems 'deviate from the models in the security proofs'\cite{Lydersen:2010qy}.
 
 Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the original security proofs; the attacker proposed in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'. 
 
-Similarly, fdjsfjdsklfkjldsfjdslk\cite{Lydersen:2010qy} and fjdskfljdsfkldsjfsdkl\cite{Wiechers:2011fk}
+The real point of weakness in a QKD system is the public communications that are required for Bob and Alice to tell each other how they made their measurements. In principle, you can learn nothing beyond the number of bits sent, and which bit positions can be used to generate a secret key unless, two conditions are met: Eve must control the arrival time of the bits at Bob's detectors, and Bob's detectors must not be identical. The first condition is easily met if you insert switches and rolls of fiber optic cable and a few other optic devices to keep the optical pulse length right—actually, making it shorter is even better, and this is possible also. The second condition is always met. No two detectors are ever exactly identical. From Bob and Alice's communication, Eve might get the whole key, or at least enough of it so that a brute force attack can succeed.
 
 \section{Conclusion}
 
