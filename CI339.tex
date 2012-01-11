@@ -13,7 +13,7 @@
 
 \title{The Use of Quantum Mechanical Effects to Provide Secure Data Communication}
 \titlerunning{The Use of Quantum Mechanical Effects in Cryptographic Techniques}
-\author{Thomas Taylor\\ \mail}
+\author{Thomas J Taylor\\ \mail}
 \authorrunning{The Use of Quantum Mechanical Effects in Cryptographic Techniques} % (feature abused to repeat the title on left hand pages)
 \institute{School of Computing, Engineering and Mathematics,\\University of Brighton.}
 
@@ -59,34 +59,17 @@ The security of public key cryptography lies in the fact that it is currently in
 
 \section{Quantum key distribution}
 
-With the discovery of Shor's algorithm suddenly rendering the public key method insecure (at least in theory), there was a need to develop new cryptographic techniques which could utilise the same quantum mechanical concepts to provide more secure data transmission. Quantum key distribution (QKD) provides a possible solution to this problem.
+With the discovery of Shor's quantum algorithm suddenly rendering the public key method insecure (at least in theory), there was a need to develop new cryptographic techniques which could utilise the same quantum mechanical concepts to provide more secure data transmission. Quantum key distribution (QKD) provides a possible solution to this problem.
 
 The sender 'Alice' first encrypts each bit of the message using a key generated from a random quantum state (as chosen by Alice), and sends the message. When the second party 'Bob' receives the transmission, he measures the data using a similarly random key. The two parties then publicly state the method chosen to prepare or measure the message. From this, they can ascertain which bits were prepared in the same way, and collate these bits into a new string. Provided there was no interference, these two strings should be identical to one another, although in practise, a transmission is considered secure if it has an error rate of considerably less than 25\%\cite{Steane:1997zr}. Any eavesdroppers of the message would cause qubits to become corrupted, as their mere measurement causes them to change state as mentioned earlier. Therefore, Alice and Bob can discover if the data has been compromised.
 
-The biggest advantage to using QKD over existing public key systems is the fact that the data transmission is protected by the laws of physics, rather than computational complexity, and the performance of current systems.
+The biggest advantage to using QKD over existing public key systems is the fact that the data transmission is protected by the laws of physics, rather than computational complexity, and the performance of current systems. [MORE NEEDED]
 
 Although rigorous mathematical proofs have been established which seemingly confirm the security of QKD\cite{Deutsch:1996fk}\cite{Shor:2000uq}, researchers at the University of Toronto have recently shown that it is not only possible, but technologically feasible using \emph{current} technology to mount an undetected attack against a \emph{commercial} QKD system. Known as a time-shift attack, an eavesdropper 'Eve' can exploit the efficiency of detectors used to receive the transmission to break the security of the system\cite{Zhao:2008fk}. Although these commercial solutions have been proven insecure, it is important to note that the commercial QKD systems 'deviate from the models in the security proofs'\cite{Lydersen:2010qy}. Most surprising about this discovery is that Zhao et al's proposed attacker is much weaker than the one proposed in the original security proofs; the attacker proposed in the paper is unable to 'perform a quantum non-demolition (QND) measurement on the photon number or compensate any loss introduced by the attack', while the attacker in the proofs can have 'arbitrarily advanced technology'. Using this method, Eve might be able to ascertain the whole key, or at least enough of the key for a brute force attack to succeed.
 
 \section{Conclusion}
 
-- Problem with existing\\
-- What quantum techniques can offer\\
-- Where we currently are with quantum key distribution\\
-  Discuss that although methods have been proven insecure, new methods will no doubt be developed (also note that only current commercial techniques have been broken, doesn't change the validity of the theoretical concept)\\
-
-Quantum key distribution 
-
-- Space communication
-
-\begin{itemize}
-
-\item{NASA Earth to space/satellite communication}\cite{Hughes:2000uq}:
-
-\begin{quotation} There will often be the need for onboard capability to process information, make decisions, and sometimes, replan elements of the mission in real time. Unfortunately, planning is an NP-Hard problem, so fine-grained replanning quickly consumes available computational resources.
-
-Currently, no known algorithm (classical or quantum) can solve NP-Hard problems in better than exponential time in the worst case. But it appears that quantum algorithms can be faster than classical ones by a significant factor.\end{quotation}
-
-\end{itemize}
+However, despite the initial teething problems with developing commercial QKD systems, QKD still represents a viable and more importantly, more secure alternative to the public key method. In addition to the existing applications for public key cryptography, QKD systems have the potential to offer a lot more to the field of data communication, for example in earth to space/satellite communication\cite{Hughes:2000uq}. [WHAT QUANTUM TECHNIQUES CAN OFFER] [WHERE WE CURRENTLY ARE WITH QKD - LATEST RESEARCH]
 
 \bibliographystyle{abbrv}
 \bibliography{EmergingTechnologies}
