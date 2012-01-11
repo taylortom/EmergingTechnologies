@@ -53,6 +53,13 @@ A.~Steane.
 \newblock Quantum computing.
 \newblock Technical report, University of Oxford, 1997.
 
+\bibitem{Vandersypen:2001fk}
+L.~M.~K. Vandersypen, M.~Steffen, G.~Breyta, C.~S. Yannoni, M.~H. Sherwood, and
+  I.~L. Chuang.
+\newblock Experimental realization of shor's quantum factoring algorithm using
+  nuclear magnetic resonance.
+\newblock {\em Nature}, 414(6866):883--887, 12 2001.
+
 \bibitem{Zhao:2008fk}
 Y.~Zhao, C.-H.~F. Fung, B.~Qi, C.~Chen, and H.-K. Lo.
 \newblock Quantum hacking: Experimental demonstration of time-shift attack
