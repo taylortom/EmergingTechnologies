@@ -51,7 +51,7 @@ P.~W. Shor and J.~Preskill.
 \bibitem{Steane:1997zr}
 A.~Steane.
 \newblock Quantum computing.
-\newblock Technical report, University of Oxford, 1997.
+\newblock {\em Reports on Progress in Physics}, 61(2):117--173, 1998.
 
 \bibitem{Vandersypen:2001fk}
 L.~M.~K. Vandersypen, M.~Steffen, G.~Breyta, C.~S. Yannoni, M.~H. Sherwood, and
@@ -59,6 +59,12 @@ L.~M.~K. Vandersypen, M.~Steffen, G.~Breyta, C.~S. Yannoni, M.~H. Sherwood, and
 \newblock Experimental realization of shor's quantum factoring algorithm using
   nuclear magnetic resonance.
 \newblock {\em Nature}, 414(6866):883--887, 12 2001.
+
+\bibitem{Wiechers:2011fk}
+C.~Wiechers, L.~Lydersen, C.~Wittmann, D.~Elser, J.~Skaar, C.~Marquardt,
+  V.~Makarov, and G.~Leuchs.
+\newblock After-gate attack on a quantum cryptosystem.
+\newblock {\em New Journal of Physics}, 13(1), 2011.
 
 \bibitem{Zhao:2008fk}
 Y.~Zhao, C.-H.~F. Fung, B.~Qi, C.~Chen, and H.-K. Lo.
