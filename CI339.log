@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 JAN 2012 13:39
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  14 JAN 2012 18:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -182,18 +182,18 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
-Underfull \vbox (badness 5105) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
 (./CI339.bbl [5]) [6] (./CI339.aux) ) 
 Here is how much of TeX's memory you used:
- 1020 strings out of 493633
- 11659 string characters out of 3143378
- 67501 words of memory out of 3000000
- 4350 multiletter control sequences out of 15000+200000
+ 1021 strings out of 493633
+ 11675 string characters out of 3143378
+ 66501 words of memory out of 3000000
+ 4351 multiletter control sequences out of 15000+200000
  11126 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 29i,9n,24p,1526b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,9n,24p,1232b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
@@ -205,7 +205,7 @@ lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
 sfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb>
-Output written on CI339.pdf (6 pages, 148771 bytes).
+Output written on CI339.pdf (6 pages, 148851 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
